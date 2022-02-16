@@ -86,7 +86,7 @@ bureau_git_prompt() {
 }
 
 
-_PATH="%{$fg_bold[white]%}%~%{$reset_color%}"
+_PATH="%{$fg_bold[cyan]%}%~%{$reset_color%}"
 
 if [[ $EUID -eq 0 ]]; then
   _USERNAME="%{$fg_bold[red]%}%n"
@@ -110,11 +110,10 @@ get_space () {
 }
 
 _1LEFT="$_PATH"
-_1RIGHT="[%*]"
+_1RIGHT=""
 
 bureau_precmd () {
   _1SPACES=`get_space $_1LEFT $_1RIGHT`
-  print
   print -rP "$_1LEFT$_1SPACES$_1RIGHT"
 }
 

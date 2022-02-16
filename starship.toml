@@ -1,24 +1,26 @@
 add_newline = false
-format = "$git_branch$git_status$git_state$character"
+format = "$time$cmd_duration$git_branch$git_status$character"
 
 [git_status]
 style = "#f0edff"
-format = "($conflicted$staged$modified$renamed$deleted$untracked$stashed$ahead_behind\b )"
+format = "(fg:#4169e1 bg:$style)($conflicted$staged$modified$renamed$deleted$untracked$stashed$ahead_behind) (fg:white bg:$style)\b"
 conflicted = "[ ](fg:88)[   ${count} ](fg:white bg:88)[ ](fg:88)"
-staged = "[M$count ](fg:green)"
-modified = "[M${count} ](fg:red)"
+staged = "[🗃️$count ](fg:green)"
+modified = "[📝${count} ](fg:red)"
 renamed = "[R${count} ](fg:208)"
 deleted = "[ ${count} ](fg:208)"
 untracked = "[?${count} ](fg:red)"
-stashed = " ${count} "
-ahead = "[ ${count} ](fg:purple)"
-behind = "[ ${count} ](fg:yellow)"
+stashed = "${count} "
+ahead = "[${count} ](fg:purple)"
+behind = "[${count} ](fg:yellow)"
+up_to_date = "(fg:green)"
 diverged = "[](fg:88)[  נּ ](fg:white bg:88)[ ${ahead_count} ](fg:purple bg:88)[ ${behind_count} ](fg:yellow bg:88)[ ](fg:88)"
 
 [git_branch]
+
 symbol = "  "
 style = "#00a2a2"
-format = "\b\b[](fg:#4169e1 bg:$style)[$symbol$branch](fg:white bg:$style)[](fg:$style) "
+format = "\b(fg:#4169e1 bg:$style)[$symbol$branch](fg:white bg:$style)[](fg:$style) "
 
 [git_state]
 am = "APPLYING-MAILBOX"
@@ -29,4 +31,9 @@ format = "\b\b[ \\($state( $progress_current/$progress_total)\\)](fg:white bg:$s
 [time]
 disabled = false
 style = "#4169e1"
-format = "[](bg:$style fg:black)[🕙$time](bg:$style fg:white)[](fg:$style)"
+format = "[](bg:$style fg:black)[$time ](bg:$style fg:white)[](fg:$style)"
+
+[[battery.display]]
+threshold = 10
+style = "bold red"
+empty_symbol = " "
