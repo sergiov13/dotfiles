@@ -11,4 +11,5 @@ Tools Used
 - Starship
 - kitty
 - kitty themes
-
+- Nerd Font
+- vscode

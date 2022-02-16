@@ -28,6 +28,7 @@ if [ "$COMMAND" != "" ]; then
     cp ~/.config/kitty/kitty.conf .
     cp ~/.oh-my-zsh/themes/bureau.zsh-theme .
     cp ~/.zshrc .
+    cp -r ~/.vscode .
     echo "${RESET}"
   elif [ "$COMMAND" == "deploy" ]; then
   	echo "${GREEN}"
@@ -36,6 +37,7 @@ if [ "$COMMAND" != "" ]; then
     cp kitty.conf ~/.config/kitty/kitty.conf
     cp bureau.zsh-theme ~/.oh-my-zsh/themes/bureau.zsh-theme
     cp .zshrc ~/.zshrc
+    cp .vscode ~/.vscode
     echo "${RESET}"
   fi
 fi
