@@ -7,13 +7,13 @@ format = "(fg:#4169e1 bg:$style)($conflicted$staged$modified$renamed$deleted$unt
 conflicted = "[ ](fg:88)[   ${count} ](fg:white bg:88)[ ](fg:88)"
 staged = "[🗃️$count ](fg:green)"
 modified = "[📝${count} ](fg:red)"
-renamed = "[R${count} ](fg:208)"
-deleted = "[ ${count} ](fg:208)"
-untracked = "[?${count} ](fg:red)"
-stashed = "${count} "
-ahead = "[${count} ](fg:purple)"
-behind = "[${count} ](fg:yellow)"
-up_to_date = "(fg:green) "
+renamed = "[🔧${count} ](fg:208)"
+deleted = "[❌${count} ](fg:208)"
+untracked = "[❓${count} ](fg:red)"
+stashed = "💾${count} "
+ahead = "[📤${count} ](fg:purple)"
+behind = "[📥${count} ](fg:yellow)"
+up_to_date = "(fg:green) "
 diverged = "[](fg:88)[  נּ ](fg:white bg:88)[ ${ahead_count} ](fg:purple bg:88)[ ${behind_count} ](fg:yellow bg:88)[ ](fg:88)"
 
 [git_branch]
@@ -31,9 +31,9 @@ format = "\b\b[ \\($state( $progress_current/$progress_total)\\)](fg:white bg:$s
 [time]
 disabled = false
 style = "#4169e1"
-format = "[](bg:$style fg:black)[$time ](bg:$style fg:white)[](fg:$style)"
+format = "[](bg:$style fg:black)[👽 $time ](bg:$style fg:white)[](fg:$style)"
 
 [[battery.display]]
-threshold = 10
+threshold = 15
 style = "bold red"
 empty_symbol = " "
