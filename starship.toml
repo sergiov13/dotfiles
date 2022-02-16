@@ -1,5 +1,5 @@
 add_newline = false
-format = "$time$cmd_duration$git_branch$git_status$character"
+format = "$time$git_branch$git_status$cmd_duration$character"
 
 [git_status]
 style = "#f0edff"
@@ -13,7 +13,7 @@ untracked = "[?${count} ](fg:red)"
 stashed = "${count} "
 ahead = "[${count} ](fg:purple)"
 behind = "[${count} ](fg:yellow)"
-up_to_date = "(fg:green)"
+up_to_date = "(fg:green) "
 diverged = "[](fg:88)[  נּ ](fg:white bg:88)[ ${ahead_count} ](fg:purple bg:88)[ ${behind_count} ](fg:yellow bg:88)[ ](fg:88)"
 
 [git_branch]
