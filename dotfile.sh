@@ -34,11 +34,13 @@ if [ "$COMMAND" != "" ]; then
   elif [ "$COMMAND" == "deploy" ]; then
   	echo "${GREEN}"
     echo "************* Deploying Files *************"
- 	cp starship.toml ~/.config/starship.toml
-    cp kitty.conf ~/.config/kitty/kitty.conf
-    cp bureau.zsh-theme ~/.oh-my-zsh/themes/bureau.zsh-theme
-    cp .zshrc ~/.zshrc
-    cp .vscode ~/.vscode
+ 	cp starship.toml ~/.config/
+    cp kitty.conf ~/.config/kitty/
+    cp bureau.zsh-theme ~/.oh-my-zsh/themes/
+    cp .zshrc ~/
+    cp .vscode ~/
+    git clone https://github.com/dexpota/kitty-themes.git ~/.config/kitty/
+    ln -s ~/.config/kitty/kitty-themes/themes/ayu_mirage.conf ~/.config/kitty/theme.conf
     echo "${RESET}"
   fi
 fi
