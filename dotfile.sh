@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+#sudo chmod +x dotfile.sh
 #colors for text
 GREEN=$(tput setaf 2)
 RESET=$(tput sgr0)
